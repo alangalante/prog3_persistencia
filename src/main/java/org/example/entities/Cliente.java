@@ -1,24 +1,20 @@
 package org.example.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-//Lombok
-@Data
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-//Persistencia
 @Entity
-public class Cliente {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nome;
+public class Cliente extends Pessoa{
+
     private String endereco;
-    private String telefone;
+    private String cpf;
 
 }
